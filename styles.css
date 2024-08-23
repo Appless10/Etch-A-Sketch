@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 450px;
+}
+
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.divContainer {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.divOnColor {
+    background-color: black;
+}
