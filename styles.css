@@ -3,6 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 450px;
+    max-height: 450px;
+    border: 5px solid red;
 }
 
 #pageContainer {
@@ -10,12 +12,13 @@
     flex-direction: column;
 }
 
-.divContainer {
+/*.divContainer {
     width: 25px;
     height: 25px;
     border: 1px solid black;
-}
+} */
 
 .divOnColor {
     background-color: black;
 }
+

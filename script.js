@@ -1,10 +1,24 @@
 let container = document.querySelector("#container");
+let newGridButton = document.querySelector("#newGrid");
+let gridSquares = 16;
 
-for (let i = 1; i <= 16; i++) {
- for (let j = 1; j <= 16; j++){ 
+displayGrid(16);
+
+newGridButton.addEventListener("click", () => {
+  let gridSquaresText = prompt("Enter squares per row/column (Max 100)");
+  gridSquares = Number(gridSquaresText);
+  container.innerHTML = "";
+  displayGrid(gridSquares);
+});
+
+function displayGrid(gridSquares){
+for (let i = 1; i <= gridSquares; i++) {
+ for (let j = 1; j <= gridSquares; j++){ 
      
      let element = document.createElement("div");
-     element.classList.add("divContainer");
+     let width = 450 / gridSquares;
+     element.style.width = `${width}px`;
+     element.style.height = `${width}px`;
      
      container.appendChild(element); 
      element.addEventListener("mouseover", () => {
@@ -15,4 +29,4 @@ for (let i = 1; i <= 16; i++) {
  
  
 }
-
+}
