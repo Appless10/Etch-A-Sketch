@@ -5,10 +5,17 @@ let gridSquares = 16;
 displayGrid(16);
 
 newGridButton.addEventListener("click", () => {
+  let inputLoop = true;
+  while (inputLoop == true ){
   let gridSquaresText = prompt("Enter squares per row/column (Max 100)");
   gridSquares = Number(gridSquaresText);
+  if (gridSquares < 100) {
+    inputLoop = false;
+  }
+  }
   container.innerHTML = "";
   displayGrid(gridSquares);
+
 });
 
 function displayGrid(gridSquares){
